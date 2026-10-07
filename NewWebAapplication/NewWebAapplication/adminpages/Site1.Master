@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="NewWebAapplication.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="StyleSheet1.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <style type="text/css">
+         .menu {
+           margin: 1rem;
+           padding: 2rem 2rem;
+           text-align: center;
+         }
+         .partOfMenu {
+           height:80px;
+           display:inline-block;
+           padding: 1rem 1rem;
+           vertical-align: middle;
+         }
+                        
+         .auto-style1 {
+             height: 80px;
+             display: inline-block;
+             vertical-align: middle;
+             width: 617px;
+         }
+         .auto-style2 {
+             height: 80px;
+             display: inline-block;
+             vertical-align: middle;
+             width:70%;
+             text-align: left;
+         }         
+         </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="main">
+            <div id="middle" style="background-color:#371F55">
+                <div id="menu" class="menu" style=" color: #FFFFFF;">
+                 <div id="first" class="auto-style2">
+                    &nbsp;<br />
+                    &nbsp;&nbsp;&nbsp; <asp:Image ID="Image2" runat="server" Height="45px" Width="198px" ImageUrl="~/pics/new logo.png" CssClass="auto-style1" />
+                </div>
+                    <div id="second" class="partOfMenu">
+                        <br />
+                <asp:Menu ID="Menu2" runat="server" Orientation="Horizontal" StaticSubMenuIndent="16px">
+                        <Items>
+                            <asp:MenuItem Text="Home" Value="Home"></asp:MenuItem>
+                            <asp:MenuItem Text="My Cart" Value="MyCart" NavigateUrl="~/MyCart.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Log In" Value="LogIn" NavigateUrl="~/LogIn.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Help" Value="Sign Up" NavigateUrl="~/Help.aspx"></asp:MenuItem>
+                        </Items>
+                        <StaticHoverStyle BorderStyle="None" Font-Underline="True" />
+                        <StaticMenuItemStyle ForeColor="White" Width="70px" Font-Size="16px" />
+                        <StaticSelectedStyle Font-Underline="True" />
+                    </asp:Menu>
+                    </div>
+                </div>
+
+            <div id="logo" style="background-position: center">   
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <asp:Label ID="Label1" runat="server" Text="Welcome To Seren's Library" Font-Bold="true" Font-Size="70px" ForeColor="White"></asp:Label>
+                
+            </div>
+                <div id="content">
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+            </div>
+            <div id="footer" style="background-color: #F7CE6B;">
+                 <p class="footer">&nbsp;</p>
+                 <p class="menu"><font color="black">&nbsp; &copy All Right Reseved.</font></p>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

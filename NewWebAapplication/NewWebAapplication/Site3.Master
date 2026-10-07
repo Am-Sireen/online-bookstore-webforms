@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site3.master.cs" Inherits="NewWebAapplication.Site3" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="StyleSheet3.css" rel="stylesheet" />
+         <style type="text/css">
+         .menu {
+           margin: 1rem;
+           padding: 2rem 2rem;
+           text-align: center;
+         }
+         .partOfMenu {
+           height:80px;
+           display:inline-block;
+           padding: 1rem 1rem;
+           vertical-align: middle;
+         }
+                        
+         .auto-style1 {
+             height: 80px;
+             display: inline-block;
+             vertical-align: middle;
+             width: 617px;
+         }
+             .auto-style3 {
+                 height: 80px;
+                 display: inline-block;
+                 vertical-align: middle;
+                 width: 42%;
+                 text-align: left;
+             }
+             .auto-style7 {
+                 height: 75px;
+                 display: inline-block;
+                 vertical-align: middle;
+                 width: 621px;
+             }
+             .main{
+                 width:100%
+             }
+             
+         </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+         <div id="main" class="main">
+            <div id="menu" class="menu" style="background-color: #331F50; color: #FFFFFF;">
+                 <div id="first" class="auto-style3">
+                    &nbsp; <asp:Image ID="Image2" runat="server" Height="45px" Width="198px" ImageUrl="~/pics/new logo.png" CssClass="auto-style1" />
+                </div>
+                    <div id="second" class="auto-style7">
+                        <div class="auto-style8">
+                <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal"  Width="460px" Font-Names="Monospace">
+                    <Items>
+                        <asp:MenuItem Text=" Home" Value=" Home" ImageUrl="~/pics/HomeIcon2.png" NavigateUrl="~/HomePage.aspx"></asp:MenuItem>
+                        <asp:MenuItem  Text=" Log in" Value=" Log in " ImageUrl="~/pics/LonInIcon.png" NavigateUrl="~/LogIn.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text=" Help" Value="Help" ImageUrl="~/pics/ContactIcon.png" NavigateUrl="~/Help.aspx"></asp:MenuItem>
+                        <asp:MenuItem  Text=" My cart" Value=" My cart" ImageUrl="~/pics/MyCartIcon.png" NavigateUrl="~/MyCart.aspx"></asp:MenuItem>
+
+                        
+                    </Items>
+                    <StaticHoverStyle BorderStyle="None" BackColor="#371F55" Font-Bold="False" Font-Underline="True" ForeColor="White" />
+                    <StaticMenuItemStyle ForeColor="White" Height="30px" Width="120px" Font-Names="" />
+                    <StaticMenuStyle BackColor="#331F50" Width="600px" />
+                    <StaticSelectedStyle Font-Bold="True" Font-Underline="True" ForeColor="White" />
+                </asp:Menu>
+                        </div>
+            </div>
+                </div>
+
+        <div id="content">
+          <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+            
+            <div id="footer" style="background-color: #F7CE6B;">
+                 <p class="menu">&nbsp;<font color="black">&nbsp; </font></p>
+                 <p class="menu">&nbsp;&nbsp;<font color="black">&copy All Right Reseved.</font></p>
+                 <p class="menu">&nbsp;</p>
+            </div>
+      </div>
+    </form>
+</body>
+</html>
