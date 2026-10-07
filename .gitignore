@@ -1,0 +1,21 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build files and restored packages
+[Bb]in/
+[Oo]bj/
+packages/
+TestResults/
+
+# Access temporary lock files
+*.laccdb
+*.ldb
+
+# Logs and personal publishing settings
+*.log
+*.publishsettings
+*.pubxml.user
